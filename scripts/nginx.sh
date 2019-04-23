@@ -40,6 +40,3 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install -y python-certbot-nginx
-
-# echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< OBTAINING AND INSTALLING SSL CERTIFICATES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-# sudo certbot --nginx --email okoyetiku@gmail.com --agree-tos --no-eff-email -d sendit-ah.gq -d www.sendit-ah.gq 
