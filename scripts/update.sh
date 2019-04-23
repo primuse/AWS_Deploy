@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#prints out each command to the terminal
-set -x
-
 #gets latest ubuntu updates 
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< RUN UBUNTU UPDATE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 sudo apt-get update

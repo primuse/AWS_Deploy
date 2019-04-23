@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#prints out each command to the terminal
-set -x
-
 #creates a directory "documents" and changes directory into it
 mkdir documents
 cd documents

@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#prints out each command to the terminal
-set -x
-
 #verifies the nginx version that was installed
 nginx -v
 
@@ -21,7 +18,7 @@ server {
   listen 80;
   server_name localhost sendit-ah.gq www.sendit-ah.gq;
   location / {
-      proxy_pass http://127.0.0.1:3000;
+    proxy_pass http://127.0.0.1:3000;
   }
 }
 
@@ -37,5 +34,12 @@ sudo service nginx restart
 
 echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SERVICE RESTARTED >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
-echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< OBTAINING AND INSTALLING SSL CERTIFICATES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-sudo certbot --nginx --email okoyetiku@gmail.com --agree-tos --no-eff-email -d sendit-ah.gq -d www.sendit-ah.gq 
+# installs packages for the setup and configuration of SSL certificates
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< INSTALLING CERTBOT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install -y python-certbot-nginx
+
+# echo "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< OBTAINING AND INSTALLING SSL CERTIFICATES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+# sudo certbot --nginx --email okoyetiku@gmail.com --agree-tos --no-eff-email -d sendit-ah.gq -d www.sendit-ah.gq 
