@@ -45,6 +45,9 @@ function certbot {
   sudo apt-get install -y python-certbot-nginx
 }
 
+function main {
+  nginxConfig
+  certbot
+}
 
-nginxConfig
-certbot
+
