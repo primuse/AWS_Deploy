@@ -30,6 +30,11 @@ function app {
   cd ~
 }
 
-directory
-cloneRepo
-app
+function main {
+  directory
+  cloneRepo
+  app
+}
+
+main
+
