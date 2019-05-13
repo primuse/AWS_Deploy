@@ -23,7 +23,12 @@ function installPm2 {
   sudo npm i pm2@latest -g
 }
 
-updateUbuntu
-installNodeJs
-installNginx
-installPm2
+function main {
+  updateUbuntu
+  installNodeJs
+  installNginx
+  installPm2
+}
+
+main
+
