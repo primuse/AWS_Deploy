@@ -50,4 +50,6 @@ function main {
   certbot
 }
 
+main
+
 
